@@ -10,7 +10,7 @@ const CLIENT_ID = '904831531443-7kr9trv3v651k5amrn1pnmf6f6b0hl86.apps.googleuser
 const client = new OAuth2Client(CLIENT_ID);
 
 
-const PORT = 7000;
+const PORT = process.env.PORT || 7000; //bind to heroku port or use 7000
 
 // Middleware
 
