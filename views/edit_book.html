@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head> 
-    <title>Hobby</title>
+    <title>Books</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -11,27 +11,44 @@
 			crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </head> 
-  <body style="background-color: rgb(194, 192, 192)" onload="loadEditItem()">
+  <body style="background-color: rgb(226, 179, 109)" onload="loadEditItem()">
    <label>ID</label>
-   <input type="text" id="_idHobby"><br>
+   <input type="text" id="_idBook"><br>
    <label>Full name</label>
-   <input type="text" id="chesshobby"><br>
+   <input type="text" id="firstname"><br>
    <label>Title</label>
-   <input type="text" id="whylove"><br>
+   <input type="text" id="title"><br>
    <label>Author</label>
-   <input type="text" id="age"><br>
+   <input type="text" id="author"><br>
    <label>Color</label>
-   <input type="text" id="regenerate"><br>
+   <input type="text" id="color"><br>
    <label>Cover Type</label>
-   <input type="text" id="categorydescribechess"><br>
+   <input type="text" id="covertype"><br>
    <label> Number of Pages </label>
-   <input type="text" id="celebrity"><br>
+   <input type="text" id="numofpages"><br>
    <label> Price </label>
-   <input type="text" id="who"><br>
+   <input type="text" id="price"><br>
    <label> Currency </label>
-   <input type="text" id="chancetomeet"><br>
+   <input type="text" id="currency"><br>
    <label >Language</label>
-   <input type="text" id="firstquestion"><br>
-<button id="button" onclick="showTheHobbyData(event)">Submit</button>
+   <input type="text" id="language"><br>
+   <label> Original Language</label>
+   <input type="text" id="origLanguage"><br>
+   <label> Edition </label>
+   <input type="text" id="edition">
+   <label>Dimensions</label>
+   <input type="text" id="dimensions"><br>
+   <label> Publisher </label>
+   <input type="text" id="publisher"><br>
+   <label>Publishing Date</label>
+   <input type="text" id="publishingdate"><br>
+   <label> Original Publishing Date</label>
+   <input type="text" id="origpublishingdate"><br>
+   <label>Genre</label> 
+   <input type="text" id="genre"><br>
+   <label> Age Restriction</label>
+   <input type="text" id="agerestriction"><br>
+   
+ <button id="button" onclick="showTheBookData(event)">Submit</button>
   </body>
 </html>
