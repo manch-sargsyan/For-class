@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Hobby editting page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="/book.css" rel="stylesheet" type="text/css" />
+    <script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"></script>
+    <script src="/admin.js"></script>
+  </head> 
+  <body style="background-color: #074069" onload="loadHobbyEditItem()">
+    <form style="background-color: #eee; margin: 30px; padding: 20px">
+      <b>
+      <label>ID</label>
+      <input type="text" id="_id" readonly> <br>
+      <label>First name</label>
+      <input type="text" id="firstNameEdit"><br>
+      <label>Last name</label>
+      <input type="text" id="LastNameEdit"><br>
+      <label>Gender</label>
+      <input type="text" id="genderEdit"><br>
+      <label>Birth date</label>
+      <input type="text" id="birthDateEdit"><br>
+      <label>Address</label>
+      <input type="text" id="addressEdit"><br>
+      <label>E-mail</label>
+      <input type="text" id="emailEdit"><br>
+      <label>Phone</label>
+      <input type="text" id="phoneEdit"><br>
+      <label>Facebook</label>
+      <input type="text" id="facebookEdit"><br>
+      <label>Certificate 1</label>
+      <input type="text" id="certificate1Edit"><br>
+      <label>Cerificate 2</label>
+      <input type="text" id="certificate2Edit"><br>
+      <label>Genre</label>
+      <input type="text" id="genreEdit"><br>
+      <label>Competitions</label>
+      <textarea id="competitionsEdit"></textarea><br>
+      <label>Education</label>
+      <input type="text" id="educationEdit"><br>
+      <label>Experiences and skills</label>
+      <textarea id="experiencesEdit"></textarea><br>
+      <label>Items</label>
+      <input type="text" id="itemsEdit"><br>
+      <label>Story</label>
+      <textarea type="text" id="storyEdit"></textarea><br>
+      <label>Benefits</label>
+      <textarea type="text" id="benefitsEdit"></textarea><br>
+      <label>Started practicing</label>
+      <input type="text" id="practicingDateEdit"><br>
+      <label>Frequency</label>
+      <input type="text" id="frequencyEdit"><br>
+      <label>Duration</label>
+      <input type="text" id="durationEdit"><br>
+      <label>The preferred way</label>
+      <input type="text" id="preferredWayEdit"><br>
+      <input type="submit" id="editHobby" value="Edit" onclick="EditData(event)" >
+      </b>
+    </form>
+  </body>
+</html>
