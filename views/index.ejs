@@ -1,18 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
-    <title>Document</title>
-</head>
-<body>
+<html 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google-signin-client_id" content="904831531443-7kr9trv3v651k5amrn1pnmf6f6b0hl86.apps.googleusercontent.com">
+    <title>Dashboard</title>
+    <link href="/index.css" rel="stylesheet" type="text/css" />
+    <script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+	<body style="background-color: grey">
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<a href="#" onclick="signOut();">Sign out</a>
+		
+		<div class="dashboard" style="text-align: center; color: azure; font-family: fantasy; font-size: 65pt; padding-top: 50px">
+			<label>WELCOME TO MARIAM'S DASHBOARD</label><br>
+		</div>
+        <div class="divCenter">
+			<div class="linkDiv">
+				<a href="http://localhost:7000/book_form">Visit the favourite book survey!!</a>
+			</div>
+			<div class="linkDiv">
+				<a href="http://localhost:7000/hobby_form">Visit the favourite hobby survey!!</a>
+			</div>
+			<div class="linkDiv">
+				<a href="http://localhost:7000/admin">Visit the admin page to see the results!!</a>
+			</div>
+		</div>
+		<script>
+			function onSignIn(googleUser) {
+			    var id_token = googleUser.getAuthResponse().id_token;
+			    var xhr = new XMLHttpRequest();
+				xhr.open('POST', '/login');
+				xhr.setRequestHeader('Content-Type', 'application/json');
+				xhr.onload = function() {
+					console.log('Signed in as: ' + xhr.responseText);
+				  	if (xhr.responseText != 'success') {
+						signOut();
+						location.assign('/login');
+					}
+				};
+				xhr.send(JSON.stringify({token: id_token}));
+			}
 
-    <h1>Welcome to Manch's app</h1>
-
-    <a href="https://manch-pr.herokuapp.com/">Books</a>
-    <a href="/login">Sign In</a>
-    <a href="https://Hobby.mariammanch.repl.co">Click to visit the tennis survey </a> <br>
-    <a href="http://manch-pr.herokuapp.com/admin.html">Click to go to admin Pages</a>
-
-</body>
+			function signOut() {
+				var auth2 = gapi.auth2.getAuthInstance();
+				auth2.signOut().then(function () {
+				  console.log('User signed out.');
+				  location.assign('/login');
+				});
+			}
+		</script>
+	</body>
 </html>
