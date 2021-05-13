@@ -1,0 +1,52 @@
+.linkDiv{
+  text-align : center;
+  padding : 40px;
+  border : 5px solid black;
+  width  : 20em;
+  height : 8em;
+  border-radius: 5px;
+  background-color: white;
+  display: inline-block;
+}
+
+.divCenter {
+  text-align: center;
+  width: 100%;
+  margin-top: 150px;
+}
+
+a {
+  font-size: 25px;
+}
+
+body {
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: grey;
+}
+
+.login {
+  position: relative;
+  margin: 150px auto;
+  padding: 20px 20px 20px;
+  width: 400px;
+  background: white;
+  border-radius: 3px;
+  height: 200px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.login h1 {
+  margin: -20px -20px 21px;
+  line-height: 45px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+}
+
