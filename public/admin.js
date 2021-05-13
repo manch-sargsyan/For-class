@@ -197,7 +197,7 @@ function loadBookEditItem() {
   document.getElementById("titleForm").value = editItem["title"];
   document.getElementById("fullNameForm").value =editItem["fullname"];
   document.getElementById("authorForm").value = editItem["author"];  
-  document.getElementById("colourForm").value = editItem["colour"]; 
+  document.getElementById("colourForm").value = editItem["color"]; 
   document.getElementById("coverTypeForm").value = editItem["covertype"]; 
   document.getElementById("otherCoverForm").value = editItem["othercovertype"]; 
   document.getElementById("pagesForm").value = editItem["numberofpages"]; 
@@ -208,7 +208,6 @@ function loadBookEditItem() {
   document.getElementById("origLangForm").value = editItem["originallanguage"];
   document.getElementById("otherOrigLangForm").value = editItem["otheroriginallanguage"];
   document.getElementById("editionForm").value = editItem["edition"]; 
-  document.getElementById("dimensionsForm").value = editItem["dimensions"];
   document.getElementById("publisherForm").value = editItem["publisher"];
   document.getElementById("pubMonthForm").value = editItem["publishingmonth"]; 
   document.getElementById("pubDayForm").value = editItem["publishingday"];
