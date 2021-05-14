@@ -293,54 +293,30 @@ function loadHobbyEditItem(){
   editItem = JSON.parse(localStorage.getItem("editItem"));
   console.log(editItem);
   document.getElementById("_id").value = editItem["_id"];
-  document.getElementById("firstNameEdit").value = editItem["firstName"];
-  document.getElementById("LastNameEdit").value =editItem["Lastname"];
-  document.getElementById("genderEdit").value = editItem["gender"];  
-  document.getElementById("birthDateEdit").value = editItem["birthDate"]; 
-  document.getElementById("addressEdit").value = editItem["address"]; 
-  document.getElementById("emailEdit").value = editItem["email"]; 
-  document.getElementById("phoneEdit").value = editItem["phone"]; 
-  document.getElementById("facebookEdit").value = editItem["facebook"]; 
-  document.getElementById("certificate1Edit").value = editItem["certificate1"]; 
-  document.getElementById("certificate2Edit").value = editItem["certificate2"]; 
-  document.getElementById("genreEdit").value = editItem["genre"];
-  document.getElementById("competitionsEdit").value = editItem["competitionInfo"];
-  document.getElementById("educationEdit").value = editItem["education"];
-  document.getElementById("experiencesEdit").value = editItem["experienceAndSkills"]; 
-  document.getElementById("itemsEdit").value = editItem["items"];
-  document.getElementById("storyEdit").value = editItem["storyBehind"];
-  document.getElementById("benefitsEdit").value = editItem["benefits"]; 
-  document.getElementById("practicingDateEdit").value = editItem["startDate"];
-  document.getElementById("frequencyEdit").value = editItem["frequency"];
-  document.getElementById("durationEdit").value = editItem["duration"];
-  document.getElementById("preferredWayEdit").value = editItem["wayToPractice"];
+  document.getElementById("chesshobbyEdit").value = editItem["fname"];
+  document.getElementById("whyloveEdit").value =editItem["whylove"];
+  document.getElementById("ageEdit").value = editItem["age"];  
+  document.getElementById("regenerateEdit").value = editItem["regenerate"]; 
+  document.getElementById("categorydescribechessEdit").value = editItem["categorydescribechess"]; 
+  document.getElementById("celebrityEdit").value = editItem["celebrity"]; 
+  document.getElementById("whoEdit").value = editItem["who"]; 
+  document.getElementById("chancetomeetEdit").value = editItem["chancetomeet"]; 
+  document.getElementById("firstquestionEdit").value = editItem["firstquestion"]; 
 }
 
 function EditData(e){
   console.log(UpdatedHobbyData);
   var UpdatedHobbyData= {};
   UpdatedHobbyData.id=document.getElementById("_id").value;
-  UpdatedHobbyData.firstName=document.getElementById("firstNameEdit").value;
-  UpdatedHobbyData.Lastname=document.getElementById("LastNameEdit").value;
-  UpdatedHobbyData.gender=document.getElementById("genderEdit").value;
-  UpdatedHobbyData.birthDate=document.getElementById("birthDateEdit").value;
-  UpdatedHobbyData.address=document.getElementById("addressEdit").value;
-  UpdatedHobbyData.email=document.getElementById("emailEdit").value;
-  UpdatedHobbyData.phone=document.getElementById("phoneEdit").value;
-  UpdatedHobbyData.facebook=document.getElementById("facebookEdit").value;
-  UpdatedHobbyData.certificate1=document.getElementById("certificate1Edit").value;
-  UpdatedHobbyData.certificate2=document.getElementById("certificate2Edit").value;
-  UpdatedHobbyData.genre=document.getElementById("genreEdit").value;
-  UpdatedHobbyData.competitionInfo=document.getElementById("competitionsEdit").value;
-  UpdatedHobbyData.education=document.getElementById("educationEdit").value;
-  UpdatedHobbyData.experienceAndSkills=document.getElementById("experiencesEdit").value;
-  UpdatedHobbyData.items=document.getElementById("itemsEdit").value;
-  UpdatedHobbyData.storyBehind=document.getElementById("storyEdit").value;
-  UpdatedHobbyData.benefits=document.getElementById("benefitsEdit").value;
-  UpdatedHobbyData.startDate=document.getElementById("practicingDateEdit").value;
-  UpdatedHobbyData.frequency=document.getElementById("frequencyEdit").value;
-  UpdatedHobbyData.duration=document.getElementById("durationEdit").value;
-  UpdatedHobbyData.wayToPractice=document.getElementById("preferredWayEdit").value;
+  UpdatedHobbyData.chesshobby=document.getElementById("chesshobbyEdit").value;
+  UpdatedHobbyData.whylove=document.getElementById("whyloveEdit").value;
+  UpdatedHobbyData.age=document.getElementById("ageEdit").value;
+  UpdatedHobbyData.regenerate=document.getElementById("regenerateEdit").value;
+  UpdatedHobbyData.categorydescribechess=document.getElementById("categorydescribechessEdit").value;
+  UpdatedHobbyData.celebrity=document.getElementById("celebrityEdit").value;
+  UpdatedHobbyData.who=document.getElementById("whoEdit").value;
+  UpdatedHobbyData.chancetomeet=document.getElementById("chancetomeetEdit").value;
+  UpdatedHobbyData.firstquestion=document.getElementById("firstquestionEdit").value;
   e.preventDefault();
   $.ajax({
     type: 'POST',
@@ -357,5 +333,45 @@ function EditData(e){
     complete: function () {
       console.log("Complete");  
     }
-  });  
+
+
+function handlechesshobbyChange() {
+  MyFormData.chesshobby = document.getElementById("fname").value;
 }
+
+function handlewhyloveChange(){
+  MyFormData.whylove=document.getElementById("whylove").value;
+  }
+
+
+function handleageChange(event){
+  MyFormData.age= document.getElementById("age").value;
+  
+}
+
+function handleregenerateChange(){
+  MyFormData.regenerate=document.getElementById("regenerate").value;
+  
+}
+
+function handlecategorydescribechessChange(){
+  MyFormData.categorydescribechess=document.getElementById("categorydescribechess").value;          }
+}
+
+function handlecelebritychange(){
+  MyFormData.celebrity=document.getElementById("celebrity").value;
+}
+
+function handlewhoChange(){
+  MyFormData.who=document.getElementById("who").value;
+}
+
+function handlechancetomeetChange(){
+  MyFormData.chancetomeet=document.getElementById("chancetomeet").value;
+}
+
+function handlefirstquestionChnage(){
+  MyFormData.firstquestion=document.getElementById("firstquestion").value;
+}
+
+  };  
