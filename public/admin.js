@@ -146,29 +146,25 @@ function UpdateData(e){
   console.log(UpdatedBookData);
   var UpdatedBookData= {};
   UpdatedBookData.id=document.getElementById("_id").value;
-  UpdatedBookData.fullname=document.getElementById("fullNameForm").value;
+  UpdatedBookData.firstname=document.getElementById("firstNameForm").value;
   UpdatedBookData.title=document.getElementById("titleForm").value;
   UpdatedBookData.author=document.getElementById("authorForm").value;
-  UpdatedBookData.colour=document.getElementById("colorForm").value;
+  UpdatedBookData.color=document.getElementById("colorForm").value;
   UpdatedBookData.covertype=document.getElementById("coverTypeForm").value;
   UpdatedBookData.othercovertype=document.getElementById("otherCoverForm").value;
-  UpdatedBookData.numberofpages=document.getElementById("pagesForm").value;
+  UpdatedBookData.numofpages=document.getElementById("pagesForm").value;
   UpdatedBookData.price=document.getElementById("priceForm").value;
   UpdatedBookData.currency=document.getElementById("currencyForm").value;
   UpdatedBookData.language=document.getElementById("langForm").value;
-  UpdatedBookData.otherlanguage=document.getElementById("otherLangForm").value;
-  UpdatedBookData.originallanguage=document.getElementById("origLangForm").value;
-  UpdatedBookData.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
+  UpdatedBookData.otherlanguage=document.getElementById("otherLanguageForm").value;
+  UpdatedBookData.originallanguage=document.getElementById("origLanguageForm").value;
+  UpdatedBookData.otheroriginallanguage=document.getElementById("otherOrigLanguageForm").value;
   UpdatedBookData.edition=document.getElementById("editionForm").value;
   UpdatedBookData.publisher=document.getElementById("publisherForm").value;
-  UpdatedBookData.publishingmonth=document.getElementById("pubMonthForm").value;
-  UpdatedBookData.publishingday=document.getElementById("pubDayForm").value;
-  UpdatedBookData.publishingyear=document.getElementById("pubYearForm").value;
-  UpdatedBookData.originalpublishingmonth=document.getElementById("origPubMonthForm").value;
-  UpdatedBookData.originalpublishingday=document.getElementById("origPubDayForm").value;
-  UpdatedBookData.originalpublishingyear=document.getElementById("origPubYearForm").value;
+  UpdatedBookData.publishing_date=document.getElementById("publishingdateForm").value;
+  UpdatedBookData.originalpubdate=document.getElementById("origPublishingDateForm").value;
   UpdatedBookData.genre=document.getElementById("genreForm").value;
-  UpdatedBookData.agerestriction=document.getElementById("agerestrictForm").value;
+  UpdatedBookData.agerestration=document.getElementById("agerestrationForm").value;
   e.preventDefault();
   $.ajax({
     type: 'POST',
@@ -193,47 +189,42 @@ function loadBookEditItem() {
   editItem = JSON.parse(localStorage.getItem("editItem"));
   console.log(editItem);
   document.getElementById("_id").value = editItem["_id"];
+  document.getElementById("firstNameForm").value =editItem["firstname"];
   document.getElementById("titleForm").value = editItem["title"];
-  document.getElementById("fullNameForm").value =editItem["fullname"];
   document.getElementById("authorForm").value = editItem["author"];  
-  document.getElementById("colourForm").value = editItem["color"]; 
+  document.getElementById("colorForm").value = editItem["color"]; 
   document.getElementById("coverTypeForm").value = editItem["covertype"]; 
   document.getElementById("otherCoverForm").value = editItem["othercovertype"]; 
   document.getElementById("pagesForm").value = editItem["numberofpages"]; 
   document.getElementById("priceForm").value = editItem["price"]; 
   document.getElementById("currencyForm").value = editItem["currency"]; 
-  document.getElementById("langForm").value = editItem["language"]; 
-  document.getElementById("otherLangForm").value = editItem["otherlanguage"];
-  document.getElementById("origLangForm").value = editItem["originallanguage"];
-  document.getElementById("otherOrigLangForm").value = editItem["otheroriginallanguage"];
+  document.getElementById("languageForm").value = editItem["language"]; 
+  document.getElementById("otherLanguageForm").value = editItem["otherlanguage"];
+  document.getElementById("origLanguageForm").value = editItem["originallanguage"];
+  document.getElementById("otherOrigLanguageForm").value = editItem["otheroriginallanguage"];
   document.getElementById("editionForm").value = editItem["edition"]; 
   document.getElementById("publisherForm").value = editItem["publisher"];
-  document.getElementById("pubMonthForm").value = editItem["publishingmonth"]; 
-  document.getElementById("pubDayForm").value = editItem["publishingday"];
-  document.getElementById("pubYearForm").value = editItem["publishingyear"];
-  document.getElementById("origPubMonthForm").value = editItem["originalpublishingmonth"];
-  document.getElementById("origPubDayForm").value = editItem["originalpublishingday"];
-  document.getElementById("origPubYearForm").value = editItem["originalpublishingyear"];
+  document.getElementById("publishing_dataForm").value = editItem["publishingdata"]; 
+  document.getElementById("originalpubdateForm").value = editItem["origPublishingDate"];
   document.getElementById("genreForm").value = editItem["genre"];
   document.getElementById("agerestrictForm").value = editItem["agerestriction"];
   
 }
 
 
-function handleTitleEditChange(){
- Myformdata.title=document.getElementById("titleForm").value;
-}
-
 function handleFullNameEditChange(){
- Myformdata.fullname=document.getElementById("fullNameForm").value;
+ Myformdata.firstname=document.getElementById("firstNameForm").value;
 }
 
+function handleTitleChange() {
+  Myformdata.title = document.getElementById("title").value;
+}
 function handleAuthorEditChange(){
  Myformdata.author=document.getElementById("authorForm").value; 
 }
 
-function handleColourEditChange(){
-  Myformdata.colour=document.getElementById("colourForm").value; 
+function handleColorEditChange(){
+  Myformdata.color=document.getElementById("colorForm").value; 
 }
 
 function handleCoverEditChange(){
@@ -257,19 +248,19 @@ function handleCurrencyEditChange(){
 }
 
 function handleLanguageEditChange(){
- Myformdata.language=document.getElementById("langForm").value; 
+ Myformdata.language=document.getElementById("languageForm").value; 
 }
 
 function handleOtherLangEditChange(){
- Myformdata.otherlanguage=document.getElementById("otherLangForm").value;
+ Myformdata.otherlanguage=document.getElementById("otherLanguageForm").value;
 }
 
 function handleOrigLangEditChange(){
- Myformdata.originallanguage=document.getElementById("origLangForm").value;
+ Myformdata.originallanguage=document.getElementById("origLanguageForm").value;
 }
 
 function handleOtherOrigLangEditChange(){
- Myformdata.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
+ Myformdata.otheroriginallanguage=document.getElementById("otherOrigLanguageForm").value;
 }
 
 function handleEditionEditChange(){
@@ -280,28 +271,12 @@ function handlePublisherEditChange(){
  Myformdata.publisher=document.getElementById("publisherForm").value;
 }
 
-function handlePublMonthEditChange(){
- Myformdata.publishingmonth=document.getElementById("pubMonthForm").value;
+function handlePublishingDataEditChange(){
+ Myformdata.publishing_data=document.getElementById("publishingdataForm").value;
 }
 
-function handlePublDayEditChange(){
- Myformdata.publishingday=document.getElementById("pubDayForm").value;
-}
-
-function handlePublYearEditChange(){
-  Myformdata.publishingyear=document.getElementById("pubYearForm").value;
-}
-
-function handleOrigPubMonthEditChange(){
- Myformdata.originalpublishingmonth=document.getElementById("origPubMonthForm").value;
-}
-
-function handleOrigPubDayEditChange(){
- Myformdata.originalpublishingday=document.getElementById("origPubDayForm").value;
-}
-
-function handleOrigPubYearEditChange(){
- Myformdata.originalpublishingyear=document.getElementById("origPubYearForm").value;
+function handleOrigPubDateEditChange(){
+ Myformdata.originalpubdate=document.getElementById("origPublishingDateForm").value;
 }
 
 function handleGenreEditChange(){
