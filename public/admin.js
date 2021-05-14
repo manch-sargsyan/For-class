@@ -333,45 +333,4 @@ function EditData(e){
     complete: function () {
       console.log("Complete");  
     }
-
-
-function handlechesshobbyChange() {
-  MyFormData.chesshobby = document.getElementById("fname").value;
-}
-
-function handlewhyloveChange(){
-  MyFormData.whylove=document.getElementById("whylove").value;
-  }
-
-
-function handleageChange(event){
-  MyFormData.age= document.getElementById("age").value;
-  
-}
-
-function handleregenerateChange(){
-  MyFormData.regenerate=document.getElementById("regenerate").value;
-  
-}
-
-function handlecategorydescribechessChange(){
-  MyFormData.categorydescribechess=document.getElementById("categorydescribechess").value;          }
-}
-
-function handlecelebritychange(){
-  MyFormData.celebrity=document.getElementById("celebrity").value;
-}
-
-function handlewhoChange(){
-  MyFormData.who=document.getElementById("who").value;
-}
-
-function handlechancetomeetChange(){
-  MyFormData.chancetomeet=document.getElementById("chancetomeet").value;
-}
-
-function handlefirstquestionChnage(){
-  MyFormData.firstquestion=document.getElementById("firstquestion").value;
-}
-
   };  
