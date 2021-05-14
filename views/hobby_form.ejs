@@ -107,160 +107,29 @@
                 <div class="rightdiv">
                 <p class="boldtitle">Why do you choose chess as your hobby?: <span class="redasterisk">*</span> <input style="border-radius: 10px;" id="chesshobby" type="text" onblur="handlechesshobbyChange()" required/></p>
                 <p class="boldtitle">Why do you love it?: <span class="redasterisk">*</span> <input style="border-radius: 10px;" id="whylove" type="text" onblur="handlewhyloveChange()" required/></p>
-                <p class="boldtitle">At what age did you start to Play chess?: <span class="redasterisk">*</span> <input style="border-radius: 10px;" id="age" type="text" onblur="handleageChange()" required/></p>
-
-
-
-
-
-                    
-                      
-                    <label id="genderlabel" class="boldtitle" for="genderRadio">Gender: <span class="redasterisk">*</span></label> <br>
-                    <input type="radio" id="malegender" name="genderRadio" value="Male" onchange="handleGenderChange(event)" >
-                    <label for="malegender">Male </label><br>
-                    <input type="radio" id="femalegender" name="genderRadio" value="Female" onchange="handleGenderChange(event)" >
-                    <label for="femalegender">Female </label><br>
-                    <input type="radio" id="othergender" name="genderRadio" value="Other" onchange="handleGenderChange(event)">
-                    <label for="othergender"> Other</label>
+                <p class="boldtitle">At what age did you start to Play chess?: <span class="redasterisk">*</span> <input style="border-radius: 10px;" id="age" type="text" onblur="handleageChange()" required/></p> 
+                    <label id="categorydescribechess" class="boldtitle" for="genderRadio">Gender: <span class="redasterisk">*</span></label> <br>
+                    <input type="radio" id="Music" name="genderRadio" value="Music" onchange="handlecategorydescribechessChange(event)" >
+                    <label for="Music">Music </label><br>
+                    <input type="radio" id="Sport" name="genderRadio" value="Sport" onchange="handlecategorydescribechessChange(event)" >
+                    <label for="Sport">Sport </label><br>
+                    <input type="radio" id="Science" name="genderRadio" value="Science" onchange="handlecategorydescribechessChange(event)">
+                    <label for="Science"> Science</label><br>
+                    <input type="radio" id="Art" name="genderRadio" value="Art" onchange="handlecategorydescribechessChange(event)" >
+                    <label for="Art">Art </label><br>
+                    <input type="radio" id="Nature" name="genderRadio" value="Nature" onchange="handlecategorydescribechessChange(event)" >
+                    <label for="Nature">Nature </label><br>
+                    <input type="radio" id="Games" name="genderRadio" value="Games" onchange="handlecategorydescribechessChange(event)">
+                    <label for="Games"> Games</label><br>
+                    <input type="radio" id="Other" name="genderRadio" value="Other" onchange="handlecategorydescribechessChange(event)">
+                    <label for="Other">Other</label><br>
                     </div>
-                    <p class="boldtitle">Birth date: <span class="redasterisk">*</span> <input type="date" id="birthDate" name="birthday-start" value="2021-02-11" min="1920-01-01" max="2021-12-31" onblur="handleBirthDateChange()" required/></p>
+
+                 <p class="boldtitle">Is there any celebrity that has the same hobby?: <span class="redasterisk">*</span> <input type="date" id="celebrity" name="celebrity" value="2021-02-11" min="1920-01-01" max="2021-12-31" onblur="handlecelebritychange()" required/></p>
+                 <p class="boldtitle">Who is he/she?: <span class="redasterisk">*</span> <input type="date" id="who" name="who" value="2021-02-11" min="1920-01-01" max="2021-12-31" onblur="handlewhoChange()" required/></p>
+                 <p class="boldtitle">If you have a chance to meet him/her, what you will do?: <span class="redasterisk">*</span> <input type="date" id="cancetomeet" name="chancetomeet" value="2021-02-11" min="1920-01-01" max="2021-12-31" onblur="handlechancetomeetChange()" required/></p>
+                 <p class="boldtitle">What would be the first question that you would ask him/her?: <span class="redasterisk">*</span> <input type="date" id="firstquestion" name="firstquestion" value="2021-02-11" min="1920-01-01" max="2021-12-31" onblur="handlefirstquestionChnage()" required/></p>
                     
-                </div>
-              </td>
-              <td>
-                <div class="rightdiv">
-                  <p>Address: <input style="border-radius: 10px;" id="address" type="text" onblur="handleAddressChange()"/></p>
-                  <p>E-mail: <input style="border-radius: 10px;" id="email" type="text" onblur="handleEmailChange()"/></p>
-                  <p>Phone: <input style="border-radius: 10px;" id="phone" type="text" onblur="handlePhoneChange()"/></p>
-                  <p>Facebook: <input style="border-radius: 10px;" id="facebook" type="text" onblur="handleFacebookChange()"/></p><br>
-                </div>
-              </td>
-          </tr>
-          <tr>
-            <td colspan=2>
-            <br />
-              <div class="centerdiv"> <p class="boldtitle">Dancing as my hobby</p> <br /> 
-              </div>
-            </td>
-    
-         </tr>
-          <tr>
-            <td>
-             <div class="centerdiv"> <p class="boldtitle">Do you have any certificates/diplomas?</p> </div>
-             <div class="rightdiv"> 
-                <p>Certificate 1 <input style="border-radius: 10px;" id="cert1" type="text" onblur="handleCertificate1Change()"/></p>
-                <p>Certificate 2 <input style="border-radius: 10px;" id="cert2" type="text" onblur="handleCertificate2Change()"/></p>
-            </div>   
-            </td>
-            <td>
-              <div class="centerdiv"> <p id="genre" class="boldtitle"> What is your favorite genre/type? <span class="redasterisk">*</span></p></div>
-              <div class="leftdiv">
-              <input type="checkbox" id="type1" name="kind" value="ModernHobby" onclick="handleHobbyGenreChange(event)" required>
-              <label for="type1"> Modern Hobby</label><br>
-              <input type="checkbox" id="type2" name="kind" value="Ballet" onclick="handleHobbyGenreChange(event)" required>
-              <label for="type2"> Ballet </label><br>
-              <input type="checkbox" id="type3" name="kind" value="Ballroom" onclick="handleHobbyGenreChange(event)" required>
-              <label for="type3"> Ballroom </label><br>
-              <input type="checkbox" id="type4" name="kind" value="HipHop" onclick="handleHobbyGenreChange(event)" required>
-              <label for="type4"> Hip Hop </label><br>
-              <input type="checkbox" id="type5" name="kind" value="Jazz" onclick="handleHobbyGenreChange(event)" required>
-              <label for="type5"> Jazz </label><br>
-              <input type="checkbox" id="type6" name="kind" value="FolkHobby" onclick="handleHobbyGenreChange(event)" required>
-              <label for="type6"> Folk Hobby </label><br>
-              <input type="checkbox" id="typeother" name="kind" value="Other" onclick="handleHobbyGenreChange(event)" required>
-              <label for="typeother"> Other </label>
-              <input id="othertext1" type="box" style="border-radius: 4px; border: 1px solid #bbb;" onblur="handleHobbyGenreChange(event)"><br>
-             </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="centerdiv"> <p class="boldtitle">Have you participated in any competitions?</p></div>
-              <div class="centerdiv">
-                <textarea style="border-radius: 10px;" id="competitions" cols="20" name="S1" rows="2" onblur="handleCompetitionChange()"></textarea>
-              </div>
-            </td>
-            <td>
-              <div class="centerdiv"> <p class="boldtitle">Education:<span class="redasterisk">*</span></p></div>
-              <div class="centerdiv">
-                <select style="border-radius: 10px;" id="education" name="Education" onchange="handleEducationChange(event)" required>
-                  <option value="school">Hobby school</option>
-                  <option value="college">College/University</option>
-                  <option value="private">Private classes</option>
-                  <option value="other"> Other</option>
-                </select>
-              </div>
-            </td>
-              
-          </tr>
-          <tr>
-              <td>
-                <div class="centerdiv"> <p class="boldtitle">Experiences and skills:</p></div>
-                <div class="centerdiv">
-                  <textarea style="border-radius: 10px;" id="skills" cols="20" name="S1" rows="2" onblur="handleExperienceChange()"></textarea>
-                </div>
-              </td>
-              <td>
-               <div class="centerdiv"> <p id="items"  class="boldtitle">What items do you need for dancing? <span class="redasterisk">*</span></p></div>
-               <div class="leftdiv">
-                  <input type="checkbox" id="access1" name="access" value="slippers" onclick="handleItemsChange(event)" required>
-                  <label for="access1"> Slippers</label><br>
-                  <input type="checkbox" id="access2" name="access" value="hobbyshoe" onclick="handleItemsChange(event)" required>
-                  <label for="access2"> Hobby shoe (Trainers, etc.)</label><br>
-                  <input type="checkbox" id="access3" name="access" value="pointeshoe" onclick="handleItemsChange(event)" required>
-                  <label for="access3"> Pointe shoe</label><br>
-                  <input type="checkbox" id="access4" name="access" value="stretchingbands" onclick="handleItemsChange(event)" required>
-                  <label for="access4"> Flexibility Stretching Bands</label><br>
-                  <input type="checkbox" id="access5" name="access" value="sleeves" onclick="handleItemsChange(event)" required>
-                  <label for="access5"> Compression socks, sleeves</label><br>
-                  <input type="checkbox" id="access6" name="access" value="costume" onclick="handleItemsChange(event)" required>
-                  <label for="access6"> Costume</label><br>
-                  <input type="checkbox" id="accessother" name="access" value="accessother" onclick="handleItemsChange(event)" required>
-                  <label for="accessother"> Other</label>
-                  <input id="itemother"type="box" style="border-radius: 4px; border: 1px solid #bbb;" onblur="handleItemsChange(event)"><br>
-                <br>
-               </div>
-              </td>
-          </tr>
-          <tr>
-            <td>
-             <div class="centerdiv"> <p class="boldtitle">What is YOUR story behind the hobby?</p></div>
-             <div class="centerdiv">
-                <textarea style="border-radius: 10px;" id="TextArea2" cols="20" name="S1" rows="2" onblur="handleStoryChange()"></textarea>
-             </div>
-            </td>
-            <td>
-              <div class="centerdiv">
-                <p class="boldtitle">When did you start practicing? <span class="redasterisk">*</span> <input type="date" id="startDate" name="trip-start" value="2021-02-11" min="2000-01-01" max="2021-12-31" onblur="handleStartDateChange()" required/></p>
-                <br>
-                <p class="boldtitle">What is the frequency (in a week) that you practice? <span class="redasterisk">*</span> </p>
-                <p><input style="border-radius: 10px;" id="frequency" type="text" onblur="handleFrequencyChange()" required/></p>
-                <p class="boldtitle">How much time do you dedicate to dancing (duration)? <span class="redasterisk">*</span></p>
-                <p><input style="border-radius: 10px;" id="duration" type="text" onblur="handleDurationChange()" required/></p>
-              </div>
-            </td>
-          
-          </tr>
-          <tr>
-            <td>
-             <div class="centerdiv"> <p class="boldtitle">What is the benefit you get from your hobby? </p></div>
-             <div class="centerdiv">
-               <textarea style="border-radius: 10px;" id="TextArea1" cols="20" name="S1" rows="2" onblur="handleBenefitsChange()"></textarea>
-             </div>  
-            </td>
-            <td>
-              <div class="centerdiv"> 
-                <p id="wayToPractice" class="boldtitle">Choose the way you prefer dancing:<span class="redasterisk">*</span></p></div>
-              <div class="leftdiv">
-                <input type="checkbox" id="approach1" name="method" value="Group" onclick="handlePracticeWayChange(event)" required>
-                <label for="approach1"> In a group </label><br>
-                <input type="checkbox" id="approach2" name="method" value="Alone" onclick="handlePracticeWayChange(event)" required>
-                <label for="approach2"> Alone </label><br>
-                <input type="checkbox" id="approach3" name="method" value="Partner" onclick="handlePracticeWayChange(event)" required>
-                <label for="approach3"> With a partner </label><br>
-                <input type="checkbox" id="approach4" name="method" value="othertype" onclick="handlePracticeWayChange(event)" required>
-                <label for="approach4"> Other </label>
-                <input id="otherapproach" type="box" style="border-radius: 4px; border: 1px solid #bbb;" onblur="handlePracticeWayChange(event)"><br>
               </div>
             </td>
           </tr>
