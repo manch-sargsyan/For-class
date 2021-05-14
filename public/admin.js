@@ -149,7 +149,7 @@ function UpdateData(e){
   UpdatedBookData.fullname=document.getElementById("fullNameForm").value;
   UpdatedBookData.title=document.getElementById("titleForm").value;
   UpdatedBookData.author=document.getElementById("authorForm").value;
-  UpdatedBookData.colour=document.getElementById("colourForm").value;
+  UpdatedBookData.colour=document.getElementById("colorForm").value;
   UpdatedBookData.covertype=document.getElementById("coverTypeForm").value;
   UpdatedBookData.othercovertype=document.getElementById("otherCoverForm").value;
   UpdatedBookData.numberofpages=document.getElementById("pagesForm").value;
@@ -160,7 +160,6 @@ function UpdateData(e){
   UpdatedBookData.originallanguage=document.getElementById("origLangForm").value;
   UpdatedBookData.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
   UpdatedBookData.edition=document.getElementById("editionForm").value;
-  UpdatedBookData.dimensions=document.getElementById("dimensionsForm").value;
   UpdatedBookData.publisher=document.getElementById("publisherForm").value;
   UpdatedBookData.publishingmonth=document.getElementById("pubMonthForm").value;
   UpdatedBookData.publishingday=document.getElementById("pubDayForm").value;
@@ -275,10 +274,6 @@ function handleOtherOrigLangEditChange(){
 
 function handleEditionEditChange(){
  Myformdata.edition=document.getElementById("editionForm").value; 
-}
-
-function handleDimensionsEditChange(){
- Myformdata.dimensions=document.getElementById("dimensionsForm").value;
 }
 
 function handlePublisherEditChange(){
