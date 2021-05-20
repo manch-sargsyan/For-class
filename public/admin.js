@@ -356,7 +356,7 @@ function handleregenerateChange(){
 
 function handlecategorydescribechessChange(){
   MyFormData.categorydescribechess=document.getElementById("categorydescribechess").value;          }
-}
+
 
 function handlecelebritychange(){
   MyFormData.celebrity=document.getElementById("celebrity").value;
